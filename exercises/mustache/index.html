@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie JSON Exercises</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--script type="text/javascript" src="http://bootcamp-rocketu.rhcloud.com/exercises/ajax/data/movies-box-office.JSON"--></script>
+	<script type="text/javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+</head>
+<body>
+<h1>Cast List</h1>
+	<ul id="moviemustache">
+	
+	</ul>
+<script id="onlyMustache" type="text/template">
+	{{#movies}}
+		{{title}}
+		{{#posters}}
+			{{thumbnail}}
+		{{/posters}}
+		{{#abridged_cast}}
+			{{name}}
+		{{/abridged_cast}}
+	{{/movies}}
+</script>
+
+
+<!--
+	<ul id = "movies">
+
+	</ul>
+	<ul id = "movieitems">
+
+	</ul>
+	<p> What? </p>
+	<ul id="mustache">
+
+	</ul> 
+
+	<ul id="onlymustache">
+
+	</ul>
+
+	<script id="movie-template" type="text/template">
+		<li>
+			<h2>{{title}}</h2>
+			<img src="{{posters.thumbnail}}" style="float:left"/>
+			<span>{{ratings.critics_ratings}}</span>
+			{{#abridged_cast}}
+				{{name}}
+				{{#name}}
+					{{characters}}
+				{{/name}}
+			{{/abridged_cast}}
+	</script>
+	<script>
+		{{#movies}}
+			{{#abridged_cast}}
+				{{name}}
+			{{/abridged_cast}}
+		{{/movies}}
+	</script>
+-->
+</body>
+</html>

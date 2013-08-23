@@ -1,0 +1,13 @@
+<?xml version = "1.0"?>
+<person>
+	<firstname>Paul</firstname>
+	<lastname>Schrage</lastname>
+	<email>paul_schrage@yahoo.com</email>
+	<age>old</age>
+	<cellnumber>cellnumber</cellnumber>
+	<favoritebands>
+		<value>The Sam Chase</value>
+		<value>The Bad Plus</value>
+		<value>The Yeah Yeah Yeahs</value>
+	</favoritebands>	
+</person>

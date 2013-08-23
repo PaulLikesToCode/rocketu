@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" ></meta>
+	<title>The Public Works Project</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31mjMaXNA33VUKwCndXANCkbgULTyY2k&sensor=false"></script>
+	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script>
+	<script type="text/javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<!--link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/-->
+	<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div>
+				<p>Welcome to the Public Works Project</p>
+			</div>
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Email"></input>
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Password"></input>
+				</div>
+				<button class="btn btn-success" type="submit">Sign in</button>
+			</form>
+		</div>
+		<div id="body">
+			<div style="width: 49%; float: left; margin-top: 100px">	
+				<div id="map" style="width: 500px; height: 500px">
+				</div>
+			</div>
+			<div style="width: 49$; float: left; margin-top: 100px">
+				<div id="submit" style="float: left;">
+					<h2>Can't find what you're looking for?</h2>
+					<a href="submit-form.html"><button type="button">Click here to submit a request.</button></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<a href="sign-up.html"><button type="button">Sign Up</button></a>
+				<a href=></a>
+			</div>
+		</div>
+	</div>

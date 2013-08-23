@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Example</title>
+		<style> 
+		div {
+			color: red;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>This is JavaScript</h1>
+		<div>
+			<script type="text/javascript">
+				//window.alert('Are you talkin to me?');
+				document.write('Line 1<br/>');
+				document.write('Line 2<br/>');
+				console.log('This is a console log line');
+				var myName = 'Paul', 
+					instructorName = 'Kevin';
+				document.write('My name is ' + myName +'.<br/>');
+				document.write('My instructor\'s name is ' + instructorName + '.<br/>');
+				var limit = 6;
+				for (var count = 1; count <= limit; count++) {
+					document.write('Hi ' + instructorName + ' the count is: ' + count + '.<br/>');
+				};
+				//var limit = 6;
+				for (var count = limit - 1; count > 0; count--) {
+					document.write('Now the count is ' + count + '.<br>');
+				};
+				function countFunction() {
+					alert('Don\'t you know how to count?');
+				}
+			</script>
+		<div>
+			<button onclick="countFunction();">Count it.</button>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+	background-color: #bbd1e0;
+}
+
+#wrapper {
+	width: 900px;
+	padding: 20px;
+	text-align: center;
+	background-color: #003054;
+	font-family: Verdana;
+	border-radius: 15px;
+}
+
+#logo {
+	left: 10px;
+}
+
+h1 {
+	float: right;
+	color: white;
+}
+
+hr {
+	color: white;
+}
+
+p {
+	color: white;
+	text-align: left;
+}
+
+div#checkbox label {
+	display: inline-block; 
+	margin-left: 0; 
+	margin-right: 20px;
+	color: white;
+}
+div#checkbox {
+	position: relative;
+	right: 220px;
+}
+button#highlight {
+	position: relative;
+	right: 400px;
+}
+
+h2 {
+	color: white;
+	width: 300px;
+	text-align: left;
+}
+
+ul {
+	color: #003054;
+	background-color: white;
+	list-style: none;
+	text-align: left;
+	width: 300px;
+	padding: 15px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+div.picklist, div.action {
+	float: left;
+	width: 48%;
+} 
+
+ul:empty {
+	color: #003054;
+	background-color: white;
+	list-style-type: none;
+	text-align: left;
+	width: 300px;
+	border-radius: 15px;
+}
+
+li div {
+	width: 300px;
+}
+
+#picklist {
+	width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

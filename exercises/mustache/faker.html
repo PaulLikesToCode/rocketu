@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<title>Faker</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/faker.js"></script>
+	<script>
+		var randomName = Faker.Name.findName();// Caitlyn Kerluke
+		var randomEmail = Faker.Internet.email(); //Rusty@arne.info
+		var randomCard = Faker.Helpers.createCard(); //random contact card containing many properties
+		console.log(randomName + ' ' + randomEmail + ' ' + randomCard);
+		console.log(randomCard);
+		//Single person entry
+		var data = {
+			firstname: Faker.Name.firstName(),
+			lastname: Faker.Name.lastName(),
+			description: Faker.Lorem.paragraph()
+		}; 
+		$(document).ready(function() {
+			$('body').append( Mustache.render( $('#sample-template').html(), data) );
+		});
+		//List of Complaints
+		var list = [];
+		for(i=0; i<10; i++) {
+			var complaint = {
+				person: Faker.Name.findName(),
+				issue: Faker.Lorem.paragraph(),
+				type: Faker.random.array_element(['Pot Holes', 'Griffitti', 'Broken Meter'])
+			};
+			list.push(complaint);
+		}
+		console.log(list);
+		$(document).ready(function() {
+				$('body').append( Mustache.render( $('#sample-array-template').html(), list) );
+		});
+	</script>
+</head>
+<body>
+	<script type="text/template" id="sample-template">
+		{{#.}}
+			<h1>Hello, {{firstname}} {{lastname}}</h1>
+			<p>{{description}}</p>
+		{{/.}}
+	</script>
+	<script type="text/template" id="sample-array-template">
+		{{#.}}
+			<li>
+				<strong>{{person}} reported a {{type}} issue.</strong>
+				<p>{{issue}}</>
+			</li>
+		{{/.}}
+	</script>
+</body>
+</html>

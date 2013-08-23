@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cafe Exercise</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31mjMaXNA33VUKwCndXANCkbgULTyY2k&sensor=false"></script>
+	<script type="text/javascript" src="js/applicationwithmap.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+</head>
+<body>
+	<ul id="cafe-data">
+		
+	</ul>
+	<script id="cafe-script" type="text/template">
+		{{#.}}
+			<div style="height:300px; width: 100px">
+				<img src="{{icon}}"/><br/>
+				<li>{{name}}</li>
+				<li>{{vicinity}}</li>
+				<li>rating: {{rating}}</li>
+				<li>Establishment Types:
+					<ul>
+						<li>{{types}}</li>
+					</ul>
+				</li>
+			</div>
+		{{/.}}
+	</script>
+	<div id="map" style="width: 400px; height: 400px">
+	</div>
+</body>
+</html>

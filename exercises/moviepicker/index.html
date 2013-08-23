@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link type='text/css' rel='stylesheet' href='assets/css/moviestyles.css'/>
+		<title>Movie Picker</title>
+	</head>
+	<body>
+		<div id='wrapper'>
+			<!--<img src="http://rocket-space.com/wp-content/uploads/2012/11/rocketspace-name-logo-large-300x116.png"/>-->
+			<img id='logo' src='rocket-u-logo-large.png'/>
+			<h1 id='heading'>Movie Picker</h1>
+			<hr/>
+			<p>Hi, thanks for stopping by. We have a great range of movies that you can order, just choose the genres that you're interested in and then double-clock any movie to add it to your pick-list.</p>
+			<div id = 'checkbox'>
+				<input type='checkbox' checked name='action' id='action' value='y'/>
+				<label for='action'>Action</label>
+				<input type='checkbox' checked name='comedy' id='comedy' value='y'/>
+				<label for='comedy'>Comedy</label>
+				<input type='checkbox' checked name='scifi' id='scifi' value='y'/>
+				<label for='scifi'>Sci-Fi & Fantasy</label>
+			</div>	
+			<p>If you would like to highlight new movies just click the "Highlight new movies" button below...</p>
+			<button id='highlight'>Highlight new movies</button>
+			<br/>
+			<div class='action'>
+				<h2>Action & Adventure</h2>
+				<ul>
+					<li>Superman: Unbound</li>
+					<li class='new'>Hansel & Gretel</li>
+					<li>A Good Day to Die Hard</li>
+					<li>Skyfall</li>
+					<li class='new'>Night of the Templar</li>
+				</ul>
+			</div>
+			<div class="picklist">
+				<h2>My Pick-list</h2>
+				<ul id="picklist">
+				</ul>
+				<p>Double-click a movie to start your list...</p>
+			</div><div class='comedy'>
+				<h2>Comedy</h2>
+				<ul>
+					<li>Junior High Spy</li>
+					<li class='new'>Movie 43</li>
+					<li>Quartet</li>
+					<li>It's a Disaster</li>
+					<li>Family Weekend</li>
+				</ul>
+			</div>
+			<div class='scifi'>
+				<h2>Sci-Fi & Fantasy</h2>
+				<ul>
+					<li>Pan's Labyrinth</li>
+					<li class='new'>Game of Thrones</li>
+					<li>Merlin</li>
+					<li>Star Trek: First Contact</li>
+					<li>Star Wars</li>
+				</ul>
+			</div>
+			<hr/>
+			<p>Copyright 2013 RocketSpace Inc.</p>
+		</div>
+		<script src="assets/js/jquery-1.10.2.min.js"></script>
+		<script src="assets/js/application.js"></script>
+	</body>
+</html>

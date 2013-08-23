@@ -1,0 +1,104 @@
+/* Paul Schrage is the author of this css file. Index.css is the css stylesheet for index.html.
+Normalizecss.css is also used.*/
+html {
+	background-color: #061639;
+}
+
+body {
+	width: 860px;
+	padding: 20px;
+	margin: 10px auto;
+	background-color: #fff;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+a:link {text-decoration: none; color: #5a0002;}
+a:hover, a:active {text-decoration: underline;}
+
+#intro, h1, h2, h3 {
+	color: #5a0002;
+}
+
+.question {
+	font-style: italic;
+}
+
+#locations {
+	list-style-type: circle;
+}
+#courses {
+	list-style-type: decimal-leading-zero;
+}
+
+div#text label { display: inline-block; width: 8em; margin-bottom: 3px;}
+
+label#male {
+	margin-left: 8em;
+}
+
+div#text input {
+	margin-bottom: 3px; border: 1px solid #333;
+}
+
+div#checkbox input {
+	display: inline-block; margin-left: 0; margin-right: 20px;
+}
+
+div#checkbox label:first-child {
+	margin-right: none;
+}
+
+textarea {
+	width: 30%;
+}
+
+div#courses, div#locations {
+	width: 40%; float: left;
+}
+
+h2.clear {
+	clear: both;
+}
+table, th, td {
+	border: 1px solid #5a0002;
+}
+th, td {
+	padding: 5px;
+}
+caption {
+	color: #5a0002;
+	font-size: 1.5em;
+	text-align: left;
+}
+th {
+	background-color: #5a0002;
+	color: white;
+}
+td:nth-child(2n) {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

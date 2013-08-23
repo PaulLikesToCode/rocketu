@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RocketU Get JSON Exercise</title>
+		<script src='jquery-1.10.2.min.js'></script>
+		<script src='testget.js'></script>
+		<script>
+			$(document).ready(function(){
+				$('#testget').on('click',function() {
+					$.ajax({
+						url:'http://bootcamp-rocketu.rhcloud.com/api?submit=Submit&firstname=Kevin&lastname=Lee',
+						type: 'GET',
+						dataType: 'json',
+						success: function(data) {
+							console.log(data);
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>JSON/XML/AJAX Exercises</h1>
+		<button id='testget'>Test Get</button>
+		<hr>
+		<form>
+			<label for="firstname">First Name</label><input type="text" name="firstname" id="firstname"/><br/>
+			<label for="lastname">Last Name</label><input type="text" name="lastname" id="lastname"/>
+			<button id="submit">Submit Form</button>
+		</form>
+	</body>
+</html>
