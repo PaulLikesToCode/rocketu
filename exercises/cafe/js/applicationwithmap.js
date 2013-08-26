@@ -1,15 +1,15 @@
 var map;
+var marker;
 
 function getDynamicMap(position) {
 	var mapOptions = {
-		center: new google.maps.LatLng(37.797677,-122.394339),
+		center: new google.maps.LatLng(37.739081,-122.417405),
 		zoom: 15,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
-
 	 map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
 }
+google.maps.event.addDomListener(window, 'load', getDynamicMap);
 
  
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
 			for (i=0; i < json.length; i++) {
 				var lat = json[i].geometry.location.lat;
 				var lng = json[i].geometry.location.lng;
-				var contentString;
+				var contentString = json[i].vicinity;
 				var infowindow = new google.maps.InfoWindow({
 					content: contentString
 				});

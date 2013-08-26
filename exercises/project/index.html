@@ -5,9 +5,11 @@
 	<title>The Public Works Project</title>
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31mjMaXNA33VUKwCndXANCkbgULTyY2k&sensor=false"></script>
-	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script>
-	<script type="text/javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script> 
+	<script type="text/javascript" src="js/faker.js"></script>
 	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/seed.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body style="margin: 0; padding: 0; height: 100%">
@@ -26,6 +28,9 @@
 							<input class="form-control" type="text" placeholder="Password"></input>
 						</div>
 						<button class="btn btn-success" type="submit">Sign in</button>
+						<div id="fb-root">
+							<fb:login-button autologoutlink="true" show-faces="false" width="200" max-rows="1"><fb:login-button>
+						</div>
 					</form>
 				</div>
 			</div>

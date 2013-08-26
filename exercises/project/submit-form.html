@@ -6,8 +6,11 @@
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31mjMaXNA33VUKwCndXANCkbgULTyY2k&sensor=false"></script>
 	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script>
-	<script type="text/javascript" src="js/application.js"></script>
 	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/faker.js"></script>
+	<script type="text/javascript" src="js/seed.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
@@ -25,6 +28,9 @@
 						<input class="form-control" type="text" placeholder="Password"></input>
 					</div>
 					<button class="btn btn-success" type="submit">Sign in</button>
+					<div id="fb-root">
+						<fb:login-button autologoutlink="true" show-faces="false" width="200" max-rows="1"><fb:login-button>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -46,8 +52,18 @@
 			<option value="bad">Bad</option>
 			<option value="terrible">Terrible</option>
 		</select><br/>
+		<p>Describe the problem here.</p>
 		<textarea rows="4" cols="50">
-		Describe the problem here.
+			<ul id="commentlist">
+
+			</ul>
+			<script id="commentmustache" type="text/template">
+				{{#.}}
+					{{username}}
+					<br/>
+					{{thoughts}}
+				{{/.}}
+			</script>
 		</textarea><br/>
 		<button class="btn btn-success" type="submit">Submit</button>
 		

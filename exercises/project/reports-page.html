@@ -26,6 +26,9 @@
 						<input class="form-control" type="text" placeholder="Password"></input>
 					</div>
 					<button class="btn btn-success" type="submit">Sign in</button>
+					<div id="fb-root">
+						<fb:login-button autologoutlink="true" show-faces="false" width="200" max-rows="1"><fb:login-button>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -35,18 +38,18 @@
 		</div>
 	</div>
 	<div style="width: 300px; height: 300px; float: left; margin-top: 100px; border: 2px solid black; overflow: scroll">
-		<script id="comments-template" type="text/template">
-			<div id="comments">
-				<ul>
-					{{#.}}
-						<li>{{username}}</li>
-						<li>date</li>
-						<li>{{thoughts}}</li>
-					{{/.}}	
-				</ul>
-			</div>
-		</script>
-	</div>	
+		<ul id="comments">
+		</ul>
+	</div>
+	<script id="comments-template" type="text/template">
+		<ul>
+			{{#.}}
+				<li style="margin-left:1px">Username: {{username}}</li>
+				<li>date</li>
+				<li>Comments: {{thoughts}}</li>
+			{{/.}}
+		</ul>
+	</script>
 	<div style="width: 300px; float: left; margin-top: 100px;">
 		<h2>Submit An Update</h2>
 		<label for="when">Date of the update:</label>
