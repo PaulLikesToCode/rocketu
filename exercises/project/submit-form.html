@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" ></meta>
-	<title>The Public Works Project</title>
+	<title>Citizen311</title>
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31mjMaXNA33VUKwCndXANCkbgULTyY2k&sensor=false"></script>
 	<script type="text/javascript" src="http://data.sfgov.org/resource/vw6y-z8j6.json"></script>
@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<div class="navbar-header">
-					<p style="font-size:24px; color: white">Welcome to the Public Works Project</P>
+					<p style="font-size:24px; color: white">Citizen311</P>
 				</div>
 				<form class="navbar-form navbar-right">
 					<div class="form-group">
@@ -42,28 +42,28 @@
 	<div style="width:40%; float:left; margin-top:100px " id="submit-form">
 		<input id="address" type="text" placeholder="Address"></input><br/>
 		<select id="dropdown"></br>
+			<option value="type">Type of Problem</option>
 			<option value="pothole">Pothole</option>
 			<option value="graffiti">Graffiti</option>
 			<option value="illegal-dumping">Illegal Dumping</option>
+			<option value="maintenance">Maintenance</option>
+			<option value="tree-maintenance">Tree Maintenance</option>
+			<option value="street-sidewalk-cleaning">Street and Sidewalk Cleaning</option>
+			<option value="sewer-issues">Sewer Issues</option>
+			<option value="abandoned-vehicle">Abandoned Vehicle</option>
+			<option value="streetlights">Streetlights</option>
+
 		</select>
 		<input id="date" type="text" placeholder="Date"></input><br/>
 		<select id="dropdown">
+			<option value="severity">Severity</option>
 			<option value="not great">Not Great</option>
 			<option value="bad">Bad</option>
 			<option value="terrible">Terrible</option>
 		</select><br/>
 		<p>Describe the problem here.</p>
 		<textarea rows="4" cols="50">
-			<ul id="commentlist">
 
-			</ul>
-			<script id="commentmustache" type="text/template">
-				{{#.}}
-					{{username}}
-					<br/>
-					{{thoughts}}
-				{{/.}}
-			</script>
 		</textarea><br/>
 		<button class="btn btn-success" type="submit">Submit</button>
 		
@@ -73,7 +73,7 @@
 			<div class="container">
 				<div class="navbar-header">
 					<a href="sign-up.html"><button class="btn btn-success" type="submit">Sign Up</button></a>
-					<a href="reports-page.html"><button class="btn btn-success" type="submit">Reports</button></a>
+					<a href="index.html"><button class="btn btn-success" type="submit">Home</button></a>
 					<a href="about.html"><button class="btn btn-success" type="submit">About</button></a>
 				</div>
 			</div>

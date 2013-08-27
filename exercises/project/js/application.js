@@ -129,7 +129,7 @@ function getDynamicMap(position) {
 		var lat = complaints[id].point.latitude;
 		var lng = complaints[id].point.longitude;
 		var address = complaints[id].address;
-		var customInfo = '<a href="#" onclick="fillCommentsBox('+complaints[id].case_id+')">'+complaints[id].case_id+'</a>';
+		var customInfo = '<a href="#" onclick="fillCommentsBox('+complaints[id].case_id+')">'+complaints[id].category+'</a>';
 		//var customInfo = '<a href="http://bootcamp.rocketu.com/exercises/project/reports-page.html$'+complaints[id].case_id+'">'+complaints[id].case_id+'</a>';
 		var infoWindow = new google.maps.InfoWindow({
 			content: customInfo
@@ -150,16 +150,15 @@ function getDynamicMap(position) {
 console.log('success');
 google.maps.event.addDomListener(window, 'load', getDynamicMap);
 
-
 function fillCommentsBox(case_id) {
-	$(document).ready(function () {
-		var commentsMustache = $('#comments-template').html();
-		console.log(commentsMustache);
-		var output = Mustache.render(commentsMustache, comments[case_id]);
-		$('#comments').html(output);
-	});
+	var commentsMustache = $('#comments-template').html();
+	var commentsOutput = Mustache.render(commentsMustache, comments[case_id]);
+	$('#comments').html(commentsOutput);
+	var complaintsMustache = $('#complaints-template').html();
+	console.log(complaints[case_id]);
+	var complaintsOutput = Mustache.render(complaintsMustache, complaints[case_id]);
+	$('#complaints').html(complaintsOutput);
 }
-
 /*if (window.location.href.search('case_id=')!==-1) {
 	var case_id = getQueryVariable('case_id');
 	currentComplaint = complaints[case_id];
